@@ -1,60 +1,46 @@
-<?php
-
-require '../src/DAO/DAO.php';
-require '../src/DAO/ArticleDAO.php';
-require '../src/DAO/CommentDAO.php';
-
-use App\src\DAO\ArticleDAO;
-use App\src\DAO\CommentDAO;
-
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Mon blog</title>
-</head>
-
-<body>
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
+<?php $this->title = 'Article'; ?>
+<h1>Article</h1>
 <div>
-    <h1>Mon blog</h1>
-    <p>En construction</p>
+    <h2><?= htmlspecialchars($article->getTitle());?></h2>
+    <p><?= htmlspecialchars($article->getStandfirst());?></p>
+    <p><?= htmlspecialchars($article->getContent());?></p>
+    <p><?= htmlspecialchars($article->getAuthor());?></p>
+    <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+</div>
+<br>
+<div class="actions">
+    <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
+    <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
+</div>
+<br>
+<a href="../public/index.php">Retour à l'accueil</a>
+<div id="comments" class="text-left" style="margin-left: 50px">
+    <h3>Ajouter un commentaire</h3>
+    <?php include('form_comment.php'); ?>
+    <h3>Commentaires</h3>
     <?php
-    $article = new ArticleDAO();
-    $articles = $article->getArticle($_GET['articleId']);
-    $article = $articles->fetch()
-    ?>
-    <div>
-        <h2><?= htmlspecialchars($article->title);?></h2>
-        <p><?= htmlspecialchars($article->chapo);?></p>
-        <p><?= htmlspecialchars($article->content);?></p>
-        <p><?= htmlspecialchars($article->author);?></p>
-        <p>Créé le : <?= htmlspecialchars($article->createdAt);?></p>
-    </div>
-    <br>
-    <?php
-    $articles->closeCursor();
-    ?>
-    <a href="home.php">Retour à l'accueil</a>
-
-
-    <div id="comments" class="text-left">
-        <h3>Commentaires</h3>
+    foreach ($comments as $comment)
+    {
+        ?>
+        <h4><?= htmlspecialchars($comment->getPseudo());?></h4>
+        <p><?= htmlspecialchars($comment->getContent());?></p>
+        <p>Posté le <?= htmlspecialchars($comment->getCreatedAt());?></p>
         <?php
-        $comment = new CommentDAO();
-        $comments = $comment->getCommentsFromArticle($_GET['articleId']);
-        while($comment = $comments->fetch())
-        {
+        if($comment->isFlag()) {
             ?>
-            <h4><?= htmlspecialchars($comment->pseudo);?></h4>
-            <p><?= htmlspecialchars($comment->content);?></p>
-            <p>Posté le <?= htmlspecialchars($comment->createdAt);?></p>
+            <p>Ce commentaire a déjà été signalé</p>
+            <?php
+        } else {
+            ?>
+            <p><a href="../public/index.php?route=flagComment&commentId=<?= $comment->getId(); ?>">Signaler le commentaire</a></p>
             <?php
         }
-        $comments->closeCursor();
         ?>
-    </div>
+        <p><a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a> </p>
+        <br>
+        <?php
+    }
+    ?>
 </div>
-</body>
-</html>
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>

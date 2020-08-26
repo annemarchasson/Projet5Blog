@@ -1,7 +1,8 @@
 <?php $this->title = 'Bloglist'; ?>
 
-<h1>Mon blog</h1>
-<p>En construction</p>
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
+<h2>Liste des articles</h2>
+<br>
 <?php
 foreach ($articles as $article)
 {
@@ -18,3 +19,6 @@ foreach ($articles as $article)
     <?php
 }
 ?>
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>
+
+

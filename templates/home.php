@@ -1,40 +1,38 @@
+<?php $this->title = 'Accueil'; ?>
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\section_photo.php');?>
+<?= $this->session->show('add_article'); ?>
+<?= $this->session->show('edit_article'); ?>
+<?= $this->session->show('delete_article'); ?>
+<?= $this->session->show('add_comment'); ?>
+<?= $this->session->show('flag_comment'); ?>
+<?= $this->session->show('delete_comment'); ?>
+<?= $this->session->show('register'); ?>
+<?= $this->session->show('login'); ?>
+<?= $this->session->show('logout'); ?>
+<?= $this->session->show('delete_account'); ?>
+<br>
+
 <?php
-
-require '../src/DAO/DAO.php';
-require '../src/DAO/ArticleDAO.php';
-
-use App\src\DAO\ArticleDAO;
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Mon blog</title>
-</head>
-
-<body>
-<div>
-    <h1>Mon blog</h1>
-    <p>En construction</p>
-    <?php
-    $article = new ArticleDAO();
-    $articles = $article->getArticles();
-    while($article = $articles->fetch())
-    {
-        ?>
-        <div>
-            <h2><a href="single.php?articleId=<?= htmlspecialchars($article->id);?>"><?= htmlspecialchars($article->title);?></a></h2>
-            <p><?= htmlspecialchars($article->chapo);?></p>
-            <p><?= htmlspecialchars($article->content);?></p>
-            <p><?= htmlspecialchars($article->author);?></p>
-            <p>Créé le : <?= htmlspecialchars($article->createdAt);?></p>
-        </div>
-        <br>
-        <?php
-    }
-    $articles->closeCursor();
+foreach ($articles as $article)
+{
     ?>
-    <a href="home.php">Retour à l'accueil</a>
-</div>
-</body>
-</html>
+    <div>
+        <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h2>
+
+        <p><?= htmlspecialchars($article->getStandfirst());?></p>
+        <p><?= htmlspecialchars($article->getContent());?></p>
+        <p><?= htmlspecialchars($article->getAuthor());?></p>
+        <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+    </div>
+    <br>
+    <?php
+}
+?>
+
+<a href="../public/index.php?route=bloglist">Voir plus d'articles</a>
+<br>
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\section_about.php');?>
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\contact.php');?>
+
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>
