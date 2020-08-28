@@ -53,12 +53,11 @@ class FrontController extends Controller
     }
     public function contact(Parameter $post)
     {
-
             if ($post->get('submit')) {
                 $errors = $this->validation->validate($post, 'Contact');
                 if (!$errors) {
                     $this->session->set('contact', 'Email envoyé');
-                    header('Location: ../public/index.php#contact');
+                    header('Location: ../public/index.php?route=contact');
                 }
                 return $this->view->render('contact', [
                     'post' => $post,

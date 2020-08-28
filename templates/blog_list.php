@@ -1,19 +1,19 @@
 <?php $this->title = 'Bloglist'; ?>
-
 <?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
-<h2>Liste des articles</h2>
+
+<link rel="stylesheet" href="../public/css/style_add.css">
+<h2>Mon blog</h2>
 <br>
 <?php
 foreach ($articles as $article)
 {
     ?>
-    <div>
+    <div class="text_article">
         <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h2>
-
-        <p><?= htmlspecialchars($article->getStandfirst());?></p>
-        <p><?= htmlspecialchars($article->getContent());?></p>
-        <p><?= htmlspecialchars($article->getAuthor());?></p>
-        <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+        <p class="standfirst_article"><?= htmlspecialchars($article->getStandfirst());?></p>
+        <p class="content_article"><?= htmlspecialchars($article->getContent());?></p>
+        <p class="author_article"><?= htmlspecialchars($article->getAuthor());?></p>
+        <p class="date_article">Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
     </div>
     <br>
     <?php

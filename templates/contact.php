@@ -1,6 +1,5 @@
-<?php
-$errors=[];
-?>
+<?php $this->title = "Envoyer un message"; ?>
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
 <!--partie contact avec formulaire-->
         <section class="page-section" id="contact">
             <div class="container">
@@ -16,7 +15,7 @@ $errors=[];
                 </div>
                 <!-- Contact Section Content-->
                 <div class="row justify-content-center">
-                    <form method="post" action="../public/index.php#contact">
+                    <form method="post" action="../public/index.php?route=contact">
                         <div class="row">
                             <div class="col">
                                 <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Prénom"
@@ -53,7 +52,7 @@ $errors=[];
             </div>
         </section>
 
-
+<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>
 <?php
 var_dump($_POST);
 var_dump($errors);
@@ -61,12 +60,13 @@ var_dump($_SESSION);
 /*
 if (!empty($errors)){
     $_SESSION['errors']= $errors;
-    header('Location: ../public/index.php#contact');
+    header('Location: ../public/index.php?route=contact');
 }else {
     $message = $_POST['message'];
     $headers = 'FROM: site@local.dev';
     mail('contact@local.dev', 'Formulaire de contact', $message, $headers);
 }
+
 var_dump($_POST);
 var_dump($errors);
 var_dump($_SESSION);

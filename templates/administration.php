@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../public/css/style_add.css">
 <?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
 <?php $this->title = 'Administration'; ?>
 
@@ -10,9 +11,10 @@
 <?= $this->session->show('delete_comment'); ?>
 <?= $this->session->show('delete_user'); ?>
 <h2>Articles</h2>
-<a href="../public/index.php?route=addArticle">Nouvel article</a>
-<table>
-    <tr>
+<a class="link_1" href="../public/index.php?route=addArticle">Nouvel article</a>
+<br>
+<table class="table_admin">
+    <tr class="tr_title">
         <td>Id</td>
         <td>Titre</td>
         <td>Courte Description</td>
@@ -25,16 +27,16 @@
     foreach ($articles as $article)
     {
         ?>
-        <tr>
+        <tr class="tr_content">
             <td><?= htmlspecialchars($article->getId());?></td>
-            <td><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></td>
+            <td><a class="link_1" href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></td>
             <td><?= substr(htmlspecialchars($article->getStandfirst()), 0, 150);?></td>
             <td><?= substr(htmlspecialchars($article->getContent()), 0, 150);?></td>
             <td><?= htmlspecialchars($article->getAuthor());?></td>
             <td>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></td>
             <td>
-                <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
-                <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
+                <a class="link_1" href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
+                <a class="link_1" href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
             </td>
         </tr>
         <?php
@@ -43,8 +45,8 @@
 </table>
 
 <h2>Commentaires signalés</h2>
-<table>
-    <tr>
+<table class="table_admin">
+    <tr class="tr_title">
         <td>Id</td>
         <td>Pseudo</td>
         <td>Message</td>
@@ -61,8 +63,8 @@
             <td><?= substr(htmlspecialchars($comment->getContent()), 0, 150);?></td>
             <td>Créé le : <?= htmlspecialchars($comment->getCreatedAt());?></td>
             <td>
-                <a href="../public/index.php?route=unflagComment&commentId=<?= $comment->getId(); ?>">Désignaler le commentaire</a>
-                <a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a>
+                <a class="link_1" href="../public/index.php?route=unflagComment&commentId=<?= $comment->getId(); ?>">Désignaler le commentaire</a>
+                <a class="link_1" href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a>
             </td>
         </tr>
         <?php
@@ -71,8 +73,8 @@
 </table>
 
 <h2>Utilisateurs</h2>
-<table>
-    <tr>
+<table class="table_admin">
+    <tr class="tr_title">
         <td>Id</td>
         <td>Pseudo</td>
         <td>Date</td>
@@ -92,7 +94,7 @@
                 <?php
                 if($user->getRole() != 'admin') {
                     ?>
-                    <a href="../public/index.php?route=deleteUser&userId=<?= $user->getId(); ?>">Supprimer</a>
+                    <a class="link_1" href="../public/index.php?route=deleteUser&userId=<?= $user->getId(); ?>">Supprimer</a>
                 <?php }
                 else {
                     ?>
