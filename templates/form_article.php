@@ -1,4 +1,4 @@
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
+<?php include('..\templates\header.php');?>
 <?php
 $route = isset($post) && $post->get('id') ? 'editArticle&articleId='.$post->get('id') : 'addArticle';
 $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
@@ -21,4 +21,4 @@ $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
     <input type="submit" value="<?= $submit; ?>" id="submit" name="submit">
 
 </form>
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>
+<?php include('..\templates\footer.php');?>

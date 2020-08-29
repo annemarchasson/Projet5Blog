@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="../public/css/style_add.css">
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
+<?php include('..\templates\header.php');?>
 <?php $this->title = "Connexion"; ?>
 <h1>Connexion</h1>
 <?= $this->session->show('error_login'); ?>
@@ -12,4 +12,4 @@
         <input type="submit" class="btn btn-primary" value="Connexion" id="submit" name="submit">
     </form>
 </div>
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>
+<?php include('..\templates\footer.php');?>

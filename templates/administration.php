@@ -1,9 +1,7 @@
 <link rel="stylesheet" href="../public/css/style_add.css">
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
+<?php include('..\templates\header.php');?>
 <?php $this->title = 'Administration'; ?>
-
 <h1>Administration</h1>
-
 <?= $this->session->show('add_article'); ?>
 <?= $this->session->show('edit_article'); ?>
 <?= $this->session->show('delete_article'); ?>
@@ -11,8 +9,7 @@
 <?= $this->session->show('delete_comment'); ?>
 <?= $this->session->show('delete_user'); ?>
 <h2>Articles</h2>
-<a class="link_1" href="../public/index.php?route=addArticle">Nouvel article</a>
-<br>
+    <a class="link_1" href="../public/index.php?route=addArticle">Nouvel article</a><br>
 <table class="table_admin">
     <tr class="tr_title">
         <td>Id</td>
@@ -43,7 +40,6 @@
     }
     ?>
 </table>
-
 <h2>Commentaires signalés</h2>
 <table class="table_admin">
     <tr class="tr_title">
@@ -71,7 +67,6 @@
     }
     ?>
 </table>
-
 <h2>Utilisateurs</h2>
 <table class="table_admin">
     <tr class="tr_title">
@@ -108,5 +103,4 @@
     }
     ?>
 </table>
-
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>
+<?php include('..\templates\footer.php');?>

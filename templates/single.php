@@ -1,4 +1,4 @@
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
+<?php include('..\templates\header.php');?>
 <?php $this->title = 'Article'; ?>
 <link rel="stylesheet" href="../public/css/style_ass.css">
 <h2>Article</h2>
@@ -48,4 +48,4 @@
     ?>
 </div>
     <a class="link_see_more_article" href="../public/index.php">Retour à l'accueil</a>
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>
+<?php include('..\templates\footer.php');?>

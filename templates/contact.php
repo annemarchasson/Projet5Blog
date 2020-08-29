@@ -1,5 +1,5 @@
 <?php $this->title = "Envoyer un message"; ?>
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
+<?php include('..\templates\header.php');?>
 <!--partie contact avec formulaire-->
         <section class="page-section" id="contact">
             <div class="container">
@@ -52,7 +52,7 @@
             </div>
         </section>
 
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>
+<?php include('..\templates\footer.php');?>
 <?php
 var_dump($_POST);
 var_dump($errors);

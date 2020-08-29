@@ -1,4 +1,4 @@
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\header.php');?>
+<?php include('..\templates\header.php');?>
 <?php $this->title = 'Modifier mot mot de passe'; ?>
 <h1>Changement mot de passe</h1>
 <div>
@@ -10,4 +10,4 @@
     </form>
 </div>
 <br>
-<?php include('C:\wamp64\www\testblog\Projet5Blog\templates\footer.php');?>
+<?php include('..\templates\footer.php');?>
