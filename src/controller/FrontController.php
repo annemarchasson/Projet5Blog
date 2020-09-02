@@ -68,24 +68,6 @@ class FrontController extends Controller
             return $this->view->render('contact');
 
     }
-    public function addArticle(Parameter $post)
-    {
-        if($this->checkAdmin()) {
-            if ($post->get('submit')) {
-                $errors = $this->validation->validate($post, 'Article');
-                if (!$errors) {
-                    $this->articleDAO->addArticle($post, $this->session->get('id'));
-                    $this->session->set('add_article', 'Le nouvel article a bien été ajouté');
-                    header('Location: ../public/index.php?route=administration');
-                }
-                return $this->view->render('add_article', [
-                    'post' => $post,
-                    'errors' => $errors
-                ]);
-            }
-            return $this->view->render('add_article');
-        }
-    }
 
     public function flagComment($commentId)
     {
