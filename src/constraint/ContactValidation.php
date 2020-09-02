@@ -32,9 +32,13 @@ class ContactValidation extends Validation
             $error = $this->checkLastname($name, $value);
             $this->addError($name, $error);
         }
-        elseif ($name === 'message') {
+        elseif ($name === 'message'){
             $error = $this->checkMessage($name, $value);
             $this->addError($name, $error);
+        }
+        elseif ($name === 'email'){
+            $error = $this->checkMail($name, $value);
+            $this->addError($name,$error);
         }
     }
 
@@ -66,6 +70,15 @@ class ContactValidation extends Validation
         }
         if($this->constraint->minLength($name, $value, 2)) {
             return $this->constraint->minLength('message', $value, 2);
+        }
+    }
+    private function checkMail ($name, $value)
+    {
+        if($this->constraint->notBlank($name, $value)) {
+        return $this->constraint->notBlank('email', $value);
+    }
+        if ($this->constraint->email($name,FILTER_VALIDATE_EMAIL)){
+            return $this->constraint->email('email',FILTER_VALIDATE_EMAIL);
         }
     }
 }

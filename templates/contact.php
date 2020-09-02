@@ -54,10 +54,11 @@
 
 <?php include('..\templates\footer.php');?>
 <?php
+/*
 var_dump($_POST);
 var_dump($errors);
 var_dump($_SESSION);
-/*
+
 if (!empty($errors)){
     $_SESSION['errors']= $errors;
     header('Location: ../public/index.php?route=contact');

@@ -28,7 +28,7 @@ class Constraint
     public function email($name, $filter)
     {
         if (!filter_var($name, FILTER_VALIDATE_EMAIL)) {
-            return '<p>Le mail' . $name . 'est considérée comme invalide.</p>';
+            return '<p>Le mail' . $name . 'est considéré comme invalide.</p>';
         }
 
     }
