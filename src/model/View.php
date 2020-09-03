@@ -4,6 +4,7 @@ namespace App\src\model;
 
 use App\config\Request;
 
+
 class View
 {
     private $file;
@@ -26,7 +27,7 @@ class View
             'content' => $content,
             'session' => $this->session
         ]);
-        echo $view;
+        print_r($view);
     }
 
     private function renderFile($file, $data)
