@@ -1,0 +1,133 @@
+h1 {
+    text-transform: capitalize;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+    padding: 2%;
+    color: darkslategrey;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-shadow: 0.02em 0.02em 0.02em darkgrey;
+}
+
+
+h2 {
+    text-transform: capitalize;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+    padding: 2%;
+    color: darkslategrey;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-shadow: 0.02em 0.02em 0.02em darkgrey;
+}
+
+h2 a {
+    color: seagreen;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+h3{
+    color: seagreen;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+
+}
+.text_article h2 {
+    padding: 0%;
+    margin-top: -20px;
+
+}
+.text_article{
+    border: 2px transparent solid;
+    border-radius:15px;
+    box-shadow: 5px 2px 13px 0.5px whitesmoke;
+    width: 40%;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.standfirst_article{
+    color:darkslategrey;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+}
+.content_article{
+    text-transform: capitalize;
+    text-align: justify;
+    color:grey;
+    text-transform: capitalize;
+
+}
+.author_article{
+    text-transform: capitalize;
+    color: #0b2e13;
+    font-weight: bold;
+}
+.date_article {
+    color: dimgrey;
+    font-style: italic;
+    font-size: 90%;
+    text-align: right;
+}
+.link_see_more_article{
+    color: #0f6674;
+    font-size: 130%;
+    font-style: italic;
+    font-weight: bold;
+    padding: 1%;
+    text-decoration: underline;
+}
+.actions {
+    display:block;
+}
+.link_1 {
+    text-transform: capitalize;
+    color: #0f6674;
+    font-size: 120%;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+
+#comments{
+    margin: 10%;
+}
+
+.tr_title{
+    color: #0b2e13;
+    font-weight: bold;
+}
+.tr_content{
+    font-style: italic;
+    color: darkslategrey;
+}
+.td{
+    margin: 30%;
+}
+
+.table_admin{
+    border: 2px transparent solid;
+    border-radius:15px;
+    box-shadow: 5px 2px 13px 0.5px whitesmoke;
+    width: 95%;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse:separate;
+    border-spacing: 1em 2em;
+}
+.message-home{
+    color: white;
+    font-size: 160%;
+    background-color: #126843;
+
+}

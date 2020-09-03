@@ -1,40 +1,33 @@
-<?php
-
-require '../src/DAO/DAO.php';
-require '../src/DAO/ArticleDAO.php';
-
-use App\src\DAO\ArticleDAO;
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Mon blog</title>
-</head>
-
-<body>
-<div>
-    <h1>Mon blog</h1>
-    <p>En construction</p>
-    <?php
-    $article = new ArticleDAO();
-    $articles = $article->getArticles();
-    while($article = $articles->fetch())
-    {
-        ?>
-        <div>
-            <h2><a href="single.php?articleId=<?= htmlspecialchars($article->id);?>"><?= htmlspecialchars($article->title);?></a></h2>
-            <p><?= htmlspecialchars($article->chapo);?></p>
-            <p><?= htmlspecialchars($article->content);?></p>
-            <p><?= htmlspecialchars($article->author);?></p>
-            <p>Créé le : <?= htmlspecialchars($article->createdAt);?></p>
-        </div>
-        <br>
-        <?php
-    }
-    $articles->closeCursor();
-    ?>
-    <a href="home.php">Retour à l'accueil</a>
+<link rel="stylesheet" href="../public/css/style_add.css">
+<?php $this->title = 'Accueil'; ?>
+<div class="message-home">
+<?= $this->session->show('add_article'); ?>
+<?= $this->session->show('edit_article'); ?>
+<?= $this->session->show('delete_article'); ?>
+<?= $this->session->show('add_comment'); ?>
+<?= $this->session->show('flag_comment'); ?>
+<?= $this->session->show('delete_comment'); ?>
+<?= $this->session->show('register'); ?>
+<?= $this->session->show('login'); ?>
+<?= $this->session->show('logout'); ?>
+<?= $this->session->show('delete_account'); ?>
 </div>
-</body>
-</html>
+<?php include('..\templates\header.php');?>
+<?php include('..\templates\section_photo.php');?><br>
+<?php
+foreach ($articles as $article)
+{
+    ?>
+    <div class="text_article">
+        <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h2>
+        <p class="standfirst_article"><?= htmlspecialchars($article->getStandfirst());?></p>
+        <p class="content_article"><?= htmlspecialchars($article->getContent());?></p>
+        <p class="author_article"><?= htmlspecialchars($article->getAuthor());?></p>
+        <p class="date_article">Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+    </div><br>
+    <?php
+}
+?>
+<a class="link_see_more_article" href="../public/index.php?route=bloglist">Voir plus d'articles</a><br>
+<?php include('..\templates\section_about.php');?>
+<?php include('..\templates\footer.php');?>
