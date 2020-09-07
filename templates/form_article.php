@@ -22,3 +22,6 @@ $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
 
 </form>
 <?php include('..\templates\footer.php');?>
+<?php
+var_dump($_POST);
+var_dump($errors);

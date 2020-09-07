@@ -42,9 +42,8 @@
                             <div class="col-sm-10">
                                 <textarea type="email" id="message" name="message" class="form-control" id="inputEmail3"><?= isset($post) ? htmlspecialchars($post->get('message')): ''; ?></textarea><br>
                                 <?= isset($errors['message']) ? $errors['message'] : ''; ?>
-
                             </div>
-                            <button class="btn btn-primary" type="submit">Envoyez</button>
+                            <button class="btn btn-primary" type="submit" value="submit" id="submit" name="submit" >Envoyez</button>
                         </div>
                     </form>
                 </div>
