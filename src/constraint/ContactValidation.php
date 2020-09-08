@@ -77,8 +77,8 @@ class ContactValidation extends Validation
         if($this->constraint->notBlank($name, $value)) {
         return $this->constraint->notBlank('email', $value);
     }
-        if ($this->constraint->email($name,FILTER_VALIDATE_EMAIL)){
-            return $this->constraint->email('email',FILTER_VALIDATE_EMAIL);
+        if ($this->constraint->email($name,$value)){
+            return $this->constraint->email('email',$value);
         }
     }
 }

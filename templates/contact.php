@@ -42,9 +42,8 @@
                             <div class="col-sm-10">
                                 <textarea type="email" id="message" name="message" class="form-control" id="inputEmail3"><?= isset($post) ? htmlspecialchars($post->get('message')): ''; ?></textarea><br>
                                 <?= isset($errors['message']) ? $errors['message'] : ''; ?>
-
                             </div>
-                            <button class="btn btn-primary" type="submit">Envoyez</button>
+                            <button class="btn btn-primary" type="submit" value="submit" id="submit" name="submit" >Envoyez</button>
                         </div>
                     </form>
                 </div>
@@ -54,38 +53,3 @@
 
 <?php include('..\templates\footer.php');?>
 <?php
-/*
-var_dump($_POST);
-var_dump($errors);
-var_dump($_SESSION);
-
-if (!empty($errors)){
-    $_SESSION['errors']= $errors;
-    header('Location: ../public/index.php?route=contact');
-}else {
-    $message = $_POST['message'];
-    $headers = 'FROM: site@local.dev';
-    mail('contact@local.dev', 'Formulaire de contact', $message, $headers);
-}
-
-var_dump($_POST);
-var_dump($errors);
-var_dump($_SESSION);
-
-
-
-
-if (empty($errors)){
-    $message = $_POST['message'];
-    $headers = 'FROM: site@local.dev';
-    mail('contact@local.dev', 'Formulaire de contact', $message, $headers);
-}else{
-    echo $errors;
-    header('Location: ../public/index.php#contact');
-}
-
-var_dump($_POST);
-var_dump($errors);
-var_dump($_SESSION);
-?>
-*/
