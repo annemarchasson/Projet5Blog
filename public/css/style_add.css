@@ -131,8 +131,4 @@ h3{
     background-color: #126843;
 
 }
-@media screen and (min-width: 0px) and (max-width: 555px) {
-    .text_article{
-        width: 70%;
-    }
-}
+
