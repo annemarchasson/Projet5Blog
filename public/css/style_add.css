@@ -1,4 +1,5 @@
-h1 {
+h1
+{
     text-transform: capitalize;
     font-size: 40px;
     font-style: italic;
@@ -11,8 +12,8 @@ h1 {
     text-shadow: 0.02em 0.02em 0.02em darkgrey;
 }
 
-
-h2 {
+h2
+{
     text-transform: capitalize;
     font-size: 40px;
     font-style: italic;
@@ -25,24 +26,39 @@ h2 {
     text-shadow: 0.02em 0.02em 0.02em darkgrey;
 }
 
-h2 a {
+h2 a
+{
     color: seagreen;
     text-transform: uppercase;
     font-size: 20px;
 }
-h3{
+
+h3
+{
     color: seagreen;
     text-transform: uppercase;
     font-size: 20px;
     text-align: center;
-
 }
-.text_article h2 {
+
+#photo
+{
+    background-color: #b5b5b5 !important;
+}
+
+#about
+{
+    background-color: #b5b5b5 !important;
+}
+
+.text_article h2
+{
     padding: 0%;
     margin-top: -20px;
-
 }
-.text_article{
+
+.text_article
+{
     border: 2px transparent solid;
     border-radius:15px;
     box-shadow: 5px 2px 13px 0.5px whitesmoke;
@@ -50,34 +66,42 @@ h3{
     padding: 2%;
     margin-left: auto;
     margin-right: auto;
-
 }
-.standfirst_article{
+
+.standfirst_article
+{
     color:darkslategrey;
     font-style: italic;
     font-weight: bold;
     font-size: 120%;
     text-align: center;
 }
-.content_article{
+
+.content_article
+{
     text-transform: capitalize;
     text-align: justify;
     color:grey;
     text-transform: capitalize;
-
 }
-.author_article{
+
+.author_article
+{
     text-transform: capitalize;
     color: #0b2e13;
     font-weight: bold;
 }
-.date_article {
+
+.date_article
+{
     color: dimgrey;
     font-style: italic;
     font-size: 90%;
     text-align: right;
 }
-.link_see_more_article{
+
+.link_see_more_article
+{
     color: #0f6674;
     font-size: 130%;
     font-style: italic;
@@ -85,10 +109,14 @@ h3{
     padding: 1%;
     text-decoration: underline;
 }
-.actions {
+
+.actions
+{
     display:block;
 }
-.link_1 {
+
+.link_1
+{
     text-transform: capitalize;
     color: #0f6674;
     font-size: 120%;
@@ -97,24 +125,30 @@ h3{
     text-align: center;
 }
 
-
-#comments{
+#comments
+{
     margin: 10%;
 }
 
-.tr_title{
+.tr_title
+{
     color: #0b2e13;
     font-weight: bold;
 }
-.tr_content{
+
+.tr_content
+{
     font-style: italic;
     color: darkslategrey;
 }
-.td{
+
+.td
+{
     margin: 30%;
 }
 
-.table_admin{
+.table_admin
+{
     border: 2px transparent solid;
     border-radius:15px;
     box-shadow: 5px 2px 13px 0.5px whitesmoke;
@@ -125,9 +159,24 @@ h3{
     border-collapse:separate;
     border-spacing: 1em 2em;
 }
-.message-home{
+
+.message-home
+{
     color: white;
     font-size: 160%;
     background-color: #126843;
+}
 
+@media screen and (min-width: 0px) and (max-width: 550px)
+{
+    .text_article
+    {
+        border: 2px transparent solid;
+        border-radius:15px;
+        box-shadow: 5px 2px 13px 0.5px whitesmoke;
+        width: 70%;
+        padding: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

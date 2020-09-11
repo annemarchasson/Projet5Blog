@@ -1,4 +1,4 @@
-<?php include('..\templates\header.php');?>
+<?php include('header.php');?>
 <?php
 $route = isset($post) && $post->get('id') ? 'editArticle&articleId='.$post->get('id') : 'addArticle';
 $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
@@ -21,7 +21,7 @@ $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
     <input type="submit" value="<?= $submit; ?>" id="submit" name="submit">
 
 </form>
-<?php include('..\templates\footer.php');?>
+<?php include('footer.php');?>
 <?php
 var_dump($_POST);
 var_dump($errors);

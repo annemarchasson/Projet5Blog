@@ -1,4 +1,4 @@
-<?php include('..\templates\header.php');?>
+<?php include('header.php');?>
 <?php $this->title = 'Modifier mot mot de passe'; ?>
 <h1>Changement mot de passe</h1>
 <div>
@@ -10,4 +10,4 @@
     </form>
 </div>
 <br>
-<?php include('..\templates\footer.php');?>
+<?php include('footer.php');?>

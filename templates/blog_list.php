@@ -1,6 +1,5 @@
 <?php $this->title = 'Bloglist'; ?>
-<?php include('..\templates\header.php');?>
-<link rel="stylesheet" href="../public/css/style_add.css">
+<?php include('header.php');?>
 <h2>Mon blog</h2><br>
 <?php
 foreach ($articles as $article)
@@ -17,6 +16,5 @@ foreach ($articles as $article)
     <?php
 }
 ?>
-<?php include('..\templates\footer.php');?>
-
+<?php include('footer.php');?>
 

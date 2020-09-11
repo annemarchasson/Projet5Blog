@@ -58,7 +58,7 @@ class FrontController extends Controller
                 if (!$errors) {
                     $this->mailDAO->sendmail();
                     $this->session->set('contact', 'Email envoyé');
-                    //header('Location: ../public/index.php?route=contact');
+                    header('Location: ../public/index.php');
                 }
                 return $this->view->render('contact', [
                     'post' => $post,

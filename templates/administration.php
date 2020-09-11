@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="../public/css/style_add.css">
-<?php include('..\templates\header.php');?>
+<?php include('header.php');?>
 <?php $this->title = 'Administration'; ?>
 <h1>Administration</h1>
 <?= $this->session->show('add_article'); ?>
@@ -103,4 +102,4 @@
     }
     ?>
 </table>
-<?php include('..\templates\footer.php');?>
+<?php include('footer.php');?>

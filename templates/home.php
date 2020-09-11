@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../public/css/style_add.css">
 <?php $this->title = 'Accueil'; ?>
 <div class="message-home">
 <?= $this->session->show('add_article'); ?>
@@ -11,9 +10,10 @@
 <?= $this->session->show('login'); ?>
 <?= $this->session->show('logout'); ?>
 <?= $this->session->show('delete_account'); ?>
+<?= $this->session->show('contact'); ?>
 </div>
-<?php include('..\templates\header.php');?>
-<?php include('..\templates\section_photo.php');?><br>
+<?php include('header.php');?>
+<?php include('section_photo.php');?><br>
 <?php
 foreach ($articles as $article)
 {
@@ -29,5 +29,5 @@ foreach ($articles as $article)
 }
 ?>
 <a class="link_see_more_article" href="../public/index.php?route=bloglist">Voir plus d'articles</a><br>
-<?php include('..\templates\section_about.php');?>
-<?php include('..\templates\footer.php');?>
+<?php include('section_about.php');?>
+<?php include('footer.php');?>

@@ -4,7 +4,7 @@
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="mb-4">MON CV</h4>
-                        <p class="pre-wrap lead mb-0"><a href="assets/img/CV.pdf">Télécharger mon cv</a></p>
+                        <p class="pre-wrap lead mb-0"><a href="../assets/img/CV.pdf">Télécharger mon cv</a></p>
                     </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
@@ -33,7 +33,6 @@
                                 <a href="../public/index.php?route=administration">Administration</a>
                             <?php } ?>
 
-
                             <?php
                         } else {
                             ?>
@@ -43,17 +42,10 @@
                             <?php
                         }
                         ?>
-
-
                     </div>
                 </div>
             </div>
         </footer>
-
-
-
-
-
 <!-- Copyright Section-->
 <section class="copyright py-4 text-center text-white">
     <div class="container"><small class="pre-wrap">Copyright © Your Website 2020</small></div>

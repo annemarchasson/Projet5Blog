@@ -1,5 +1,5 @@
 <?php $this->title = "Envoyer un message"; ?>
-<?php include('..\templates\header.php');?>
+<?php include('header.php');?>
 <!--partie contact avec formulaire-->
         <section class="page-section" id="contact">
             <div class="container">
@@ -32,7 +32,7 @@
                         <div class="form-group row">
                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" id="email" name="email" class="form-control" id="inputEmail3"
+                                <input type="email" id="email" name="email" class="form-control"
                                        value="<?= isset($post) ? htmlspecialchars($post->get('email')): ''; ?>"><br>
                                 <?= isset($errors['email']) ? $errors['email'] : ''; ?>
                             </div>
@@ -40,7 +40,7 @@
                         <div class="form-group row">
                             <label for="message" class="col-sm-2 col-form-label">Message</label>
                             <div class="col-sm-10">
-                                <textarea type="email" id="message" name="message" class="form-control" id="inputEmail3"><?= isset($post) ? htmlspecialchars($post->get('message')): ''; ?></textarea><br>
+                                <textarea type="email" id="message" name="message" class="form-control"><?= isset($post) ? htmlspecialchars($post->get('message')): ''; ?></textarea><br>
                                 <?= isset($errors['message']) ? $errors['message'] : ''; ?>
                             </div>
                             <button class="btn btn-primary" type="submit" value="submit" id="submit" name="submit" >Envoyez</button>
@@ -51,5 +51,5 @@
             </div>
         </section>
 
-<?php include('..\templates\footer.php');?>
+<?php include('footer.php');?>
 <?php

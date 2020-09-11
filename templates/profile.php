@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="../public/css/style_add.css">
-<?php include('..\templates\header.php');?>
+<?php include('header.php');?>
 <?php $this->title = 'Mon profil'; ?>
 <h1>Profile</h1>
 <?= $this->session->show('update_password'); ?>
@@ -10,4 +9,4 @@
     <a class="link_1" href="../public/index.php?route=deleteAccount">Supprimer son compte</a>
 </div>
 <br>
-<?php include('..\templates\footer.php');?>
+<?php include('footer.php');?>

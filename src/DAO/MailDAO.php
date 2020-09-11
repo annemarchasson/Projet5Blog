@@ -9,11 +9,18 @@ class MailDAO
     {
         $to = 'annemarchasson@yahoo.fr';
         $subject ='Formulaire de contact';
-        $from = $_POST['email'];
-        $message = $_POST['message'];
-        $headers = "De :" . $from;
+        $email = $_POST['email'];
 
-        mail($to,$subject, $message, $headers);
+
+        $message = "Message de ".$_POST['firstname']." ".$_POST['lastname'].": "."\r\n";
+        $message .= $_POST['message']."\r\n";
+
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+        $headers .= 'From: <'.$email.'>'."\r\n\r\n";
+
+
+        mail($to, $subject, $message, $headers);
     }
 
 }

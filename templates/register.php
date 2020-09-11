@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="../public/css/style_add.css">
-<?php include('..\templates\header.php');?>
+<?php include('header.php');?>
 <?php $this->title = "Inscription"; ?>
 <h1>Inscription</h1>
 <div class="text_article">
@@ -13,4 +12,4 @@
         <input type="submit" class="btn btn-primary" value="Inscription" id="submit" name="submit">
     </form>
 </div>
-<?php include('..\templates\footer.php');?>
+<?php include('footer.php');?>

@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="../public/css/style_add.css">
 <?php
 $route = isset($post) && $post->get('id') ? 'editComment' : 'addComment';
 $submit = $route === 'addComment' ? 'Ajouter' : 'Mettre à jour';

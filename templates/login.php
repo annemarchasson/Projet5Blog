@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="../public/css/style_add.css">
-<?php include('..\templates\header.php');?>
+<?php include('header.php');?>
 <?php $this->title = "Connexion"; ?>
 <h1>Connexion</h1>
 <?= $this->session->show('error_login'); ?>
@@ -12,4 +11,6 @@
         <input type="submit" class="btn btn-primary" value="Connexion" id="submit" name="submit">
     </form>
 </div>
-<?php include('..\templates\footer.php');?>
+<?php include('footer.php');?>
+
+

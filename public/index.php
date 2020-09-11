@@ -9,12 +9,13 @@
         <!-- Font Awesome icons (free version)-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet">
+        <link href="../css/styles.css" rel="stylesheet">
+        <link href="../css/style_add.css" rel="stylesheet">
         <!-- Fonts CSS-->
-        <link rel="stylesheet" href="css/heading.css">
-        <link rel="stylesheet" href="css/body.css">
+        <link rel="stylesheet" href="../css/heading.css">
+        <link rel="stylesheet" href="../css/body.css">
+        <link rel="stylesheet" href="../css/style_add.css">
     </head>
-    <body id="page-top">
 
         <?php
         require '../config/dev.php';
@@ -35,3 +36,4 @@
         <script src="js/scripts.js"></script>
     </body>
 </html>
+

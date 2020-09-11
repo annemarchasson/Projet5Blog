@@ -1,6 +1,5 @@
-<?php include('..\templates\header.php');?>
+<?php include('header.php');?>
 <?php $this->title = 'Article'; ?>
-<link rel="stylesheet" href="../public/css/style_ass.css">
 <h2>Article</h2>
 <div class="text_article">
     <h3><?= htmlspecialchars($article->getTitle());?></h3>
@@ -48,4 +47,4 @@
     ?>
 </div>
     <a class="link_see_more_article" href="../public/index.php">Retour à l'accueil</a>
-<?php include('..\templates\footer.php');?>
+<?php include('footer.php');?>

@@ -11,6 +11,7 @@ class BackController extends Controller
         if(!$this->session->get('pseudo')) {
             $this->session->set('need_login', 'Vous devez vous connecter pour accéder à cette page');
             header('Location: ../public/index.php?route=login');
+
         } else {
             return true;
         }
