@@ -1,4 +1,7 @@
 # Projet5BlogPROJET
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/85832e98d4be4daca6773da9a2d61074)](https://app.codacy.com/manual/annemarchasson/Projet5Blog?utm_source=github.com&utm_medium=referral&utm_content=annemarchasson/Projet5Blog&utm_campaign=Badge_Grade_Dashboard)
+
 Mon blog professionnel : Anne Marchasson
 
 DESCRIPTION
