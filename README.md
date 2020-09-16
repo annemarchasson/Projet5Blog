@@ -16,11 +16,9 @@ Système de gestion de base de donnée: PhpMyAdmin
 
 INSTALLATION
 
-1.Télécharger le projet sur GitHub en faisant un git clone: https://github.com/annemarchasson/Projet5Blog.git
-
-2. Créer une base de donnée blog dans PhpMyAdmin
-
-3. Importer blog.sql (Projet5Blog\sql\blog.sql)
+1)Télécharger le projet sur GitHub en faisant un git clone: https://github.com/annemarchasson/Projet5Blog.git
+2)Créer une base de donnée blog dans PhpMyAdmin
+3)Importer blog.sql (Projet5Blog\sql\blog.sql)
 
 
 AUTEUR
